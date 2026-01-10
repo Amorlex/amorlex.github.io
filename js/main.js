@@ -19,6 +19,40 @@
         nav.classList.remove('is-open');
       });
     });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+        toggle.focus();
+      }
+    });
+
+    // Focus trap for mobile menu
+    nav.addEventListener('keydown', function(e) {
+      if (!nav.classList.contains('is-open')) return;
+      
+      var focusableElements = nav.querySelectorAll('a[href]');
+      var firstElement = focusableElements[0];
+      var lastElement = focusableElements[focusableElements.length - 1];
+      
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          // Shift + Tab
+          if (document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {
+          // Tab
+          if (document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
+      }
+    });
   }
 
   function initScrollAnimations() {
@@ -59,6 +93,8 @@
   }
 
   function initSmoothScroll() {
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
       anchor.addEventListener('click', function(e) {
         var href = this.getAttribute('href');
@@ -74,7 +110,7 @@
         
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth'
+          behavior: prefersReducedMotion ? 'auto' : 'smooth'
         });
 
         if (history.pushState) {

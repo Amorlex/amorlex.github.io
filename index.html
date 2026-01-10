@@ -6,17 +6,30 @@
   <meta name="description" content="Amorlex builds software systems that help businesses operate better, scale thoughtfully, and serve customers well.">
   <meta name="theme-color" content="#1a1a2e">
   
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Amorlex — Software That Works">
+  <meta property="og:description" content="We build software systems that help businesses operate better, scale thoughtfully, and serve customers well.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amorlex.com/">
+  <meta property="og:image" content="https://amorlex.com/assets/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amorlex — Software That Works">
+  <meta name="twitter:description" content="We build software systems that help businesses operate better, scale thoughtfully, and serve customers well.">
+  
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://amorlex.com/">
+  
   <title>Amorlex | Software That Works</title>
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   
   <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <!-- Font: Inter - clean, professional, highly readable -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font: DM Sans - clean, professional, highly readable -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -30,7 +43,7 @@
     <div class="container">
       <a href="/" class="logo" aria-label="Amorlex home">
         <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <text x="0" y="24" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600" fill="#111827">Amorlex</text>
+          <path d="M0 24L5.4 8.4H8.1L13.5 24H10.8L9.6 20.4H3.9L2.7 24H0ZM4.5 18H9L6.75 11.1L4.5 18ZM16.2 24V8.4H19.8l3.6 10.8 3.6-10.8H30.6V24H28.2V13.2L24.6 24H22.2L18.6 13.2V24H16.2ZM38.7 24.3C37.1 24.3 35.8 23.8 34.8 22.8C33.8 21.8 33.3 20.4 33.3 18.6V13.8C33.3 12 33.8 10.6 34.8 9.6C35.8 8.6 37.1 8.1 38.7 8.1C40.3 8.1 41.6 8.6 42.6 9.6C43.6 10.6 44.1 12 44.1 13.8V18.6C44.1 20.4 43.6 21.8 42.6 22.8C41.6 23.8 40.3 24.3 38.7 24.3ZM38.7 21.9C39.5 21.9 40.1 21.6 40.5 21C40.9 20.4 41.1 19.6 41.1 18.6V13.8C41.1 12.8 40.9 12 40.5 11.4C40.1 10.8 39.5 10.5 38.7 10.5C37.9 10.5 37.3 10.8 36.9 11.4C36.5 12 36.3 12.8 36.3 13.8V18.6C36.3 19.6 36.5 20.4 36.9 21C37.3 21.6 37.9 21.9 38.7 21.9ZM47.4 24V8.4H52.8C54.4 8.4 55.7 8.8 56.6 9.6C57.5 10.4 57.9 11.5 57.9 12.9C57.9 14 57.6 14.9 57 15.6C56.4 16.3 55.6 16.7 54.6 16.8L58.2 24H55.2L51.9 17.1H50.1V24H47.4ZM50.1 14.7H52.5C53.3 14.7 53.9 14.5 54.3 14.1C54.7 13.7 54.9 13.2 54.9 12.6C54.9 12 54.7 11.5 54.3 11.1C53.9 10.7 53.3 10.5 52.5 10.5H50.1V14.7ZM61.2 24V8.4H63.9V21.6H71.4V24H61.2ZM74.1 24V8.4H83.7V10.8H76.8V14.7H82.5V17.1H76.8V21.6H83.7V24H74.1ZM90.6 24L86.1 16.2L90.3 8.4H93.3L89.4 15.3L93.6 24H90.6ZM86.7 24V8.4H89.4V24H86.7Z" fill="currentColor"/>
         </svg>
         <span class="visually-hidden">Amorlex</span>
       </a>
@@ -62,6 +75,7 @@
   <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
+      <div class="hero-grid-pattern" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-content fade-in">
           <h1>Software systems that help your business work better</h1>
@@ -259,21 +273,49 @@
       </div>
     </section>
 
+    <!-- Social Proof (hidden until testimonials available)
+    <section class="section">
+      <div class="container">
+        <div class="testimonials fade-in">
+          <blockquote class="testimonial">
+            <p class="testimonial-quote">
+              Working with Amorlex felt different from the start. They took the time to 
+              understand our business before writing a single line of code. The system 
+              they built has been running smoothly for two years now.
+            </p>
+            <footer class="testimonial-attribution">
+              <strong>Operations Director</strong>
+              B2B Logistics Company, 50+ employees
+            </footer>
+          </blockquote>
+          
+          <div class="trusted-by">
+            <p class="trusted-by-label">Trusted by teams in</p>
+            <div class="trusted-by-list">
+              <span class="trusted-by-item">Healthcare</span>
+              <span class="trusted-by-item">Logistics</span>
+              <span class="trusted-by-item">Financial Services</span>
+              <span class="trusted-by-item">E-commerce</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
     <!-- Contact / CTA -->
     <section id="contact" class="section section-contact">
       <div class="container">
         <div class="contact-content fade-in">
           <h2>Let's Talk</h2>
-          <p>
-            If what you've read resonates, we'd enjoy hearing about your project. 
-            No sales pitch, no pressure. Just a conversation to see if there's a fit.
+          <p class="contact-intro">
+            If what you've read resonates, I'd enjoy hearing about your project. 
+            No sales pitch, no pressure—just a conversation to see if there's a fit.
           </p>
-          <p class="contact-email">
-            <a href="mailto:alex@amorlex.com">alex@amorlex.com</a>
-          </p>
+          <a href="mailto:alex@amorlex.com" class="contact-cta">alex@amorlex.com</a>
           <p class="contact-note">
-            Tell us a bit about your business and what you're trying to build. 
-            We'll get back to you within a couple of days.
+            Tell me about your business and what you're trying to build. 
+            You'll hear back from me personally within a couple of days. —Alex
           </p>
         </div>
       </div>
@@ -283,9 +325,11 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-company">Amorlex LLC</p>
-      <p class="footer-copyright">&copy; <span id="current-year">2026</span></p>
-      <p class="footer-tagline">Built with care.</p>
+      <span class="footer-company">Amorlex LLC</span>
+      <span class="footer-divider">—</span>
+      <span>&copy; <span id="current-year">2026</span></span>
+      <span class="footer-divider">—</span>
+      <span>Built with care.</span>
     </div>
   </footer>
 
