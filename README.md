@@ -25,7 +25,7 @@ For a custom domain:
 In `index.html`, find the contact section and update:
 
 ```html
-<a href="mailto:hello@amorlex.com">hello@amorlex.com</a>
+<a href="mailto:alex@amorlex.com">alex@amorlex.com</a>
 ```
 
 ### Change Colors
