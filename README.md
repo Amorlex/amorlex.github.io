@@ -45,28 +45,6 @@ In `css/styles.css`, modify the CSS custom properties at the top:
 }
 ```
 
-### Update Copy
-
-All text content is in `index.html`. Each section is clearly marked with HTML comments:
-
-- **Hero**: Main headline and value proposition
-- **What We Do**: Three service offerings
-- **How We Work**: Four-step process
-- **Why Amorlex**: Four differentiators
-- **Who We're For**: Good fit / not a fit lists
-- **Contact**: Call to action and email
-
-### Update Logo
-
-The logo is an inline SVG in `index.html`. To use your own:
-
-1. Replace the `<svg>` element inside the `.logo` link with your logo (SVG preferred for crisp display)
-2. Or replace with an `<img>` tag pointing to your logo file
-
-### Add Favicon
-
-Replace `assets/favicon.svg` with your favicon. The site uses an SVG favicon by default (works in all modern browsers). For broader compatibility, you can also add an ICO file and update the link in `index.html`. Generate one at [favicon.io](https://favicon.io/) or [realfavicongenerator.net](https://realfavicongenerator.net/).
-
 ## File Structure
 
 ```
