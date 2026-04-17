@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  document.documentElement.classList.add('js');
+
   function initMobileMenu() {
     var toggle = document.querySelector('.mobile-menu-toggle');
     var nav = document.getElementById('mobile-nav');
@@ -106,7 +108,7 @@
         e.preventDefault();
         
         var headerHeight = document.querySelector('.site-header').offsetHeight;
-        var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        var targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
         
         window.scrollTo({
           top: targetPosition,

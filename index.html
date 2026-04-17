@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Amorlex builds software systems that help businesses operate better, scale thoughtfully, and serve customers well.">
-  <meta name="theme-color" content="#1a1a2e">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
   
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Amorlex — Software That Works">
   <meta property="og:description" content="We build software systems that help businesses operate better, scale thoughtfully, and serve customers well.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://amorlex.com/">
-  <meta property="og:image" content="https://amorlex.com/assets/og-image.svg">
+  <meta property="og:image" content="https://amorlex.com/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Amorlex — Software That Works">
   <meta name="twitter:description" content="We build software systems that help businesses operate better, scale thoughtfully, and serve customers well.">
+  <meta name="twitter:image" content="https://amorlex.com/assets/og-image.png">
   
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://amorlex.com/">
@@ -23,16 +25,115 @@
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/favicon-192.png">
   
   <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <!-- Font: DM Sans - clean, professional, highly readable -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
+  <link rel="preload" href="css/styles.css" as="style">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Amorlex LLC",
+    "url": "https://amorlex.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://amorlex.com/assets/favicon-192.png",
+      "width": 192,
+      "height": 192
+    },
+    "description": "Amorlex builds software systems that help businesses operate better, scale thoughtfully, and serve customers well.",
+    "email": "alex@amorlex.com"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Amorlex LLC",
+    "url": "https://amorlex.com",
+    "description": "Custom software development agency specializing in SaaS products, internal tools, and long-term technical partnerships.",
+    "email": "alex@amorlex.com",
+    "serviceType": ["SaaS Product Development", "Custom Software Development", "Technical Consulting"],
+    "areaServed": {
+      "@type": "Country",
+      "name": "US"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Software Development Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SaaS Product Development",
+            "description": "Build subscription software products from concept through launch and ongoing development."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Software Systems",
+            "description": "Internal tools, workflow automation, data pipelines, and integrations tailored to your operations."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Long-Term Technical Partnership",
+            "description": "Ongoing embedded development support without building a full internal engineering team."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What kind of clients is Amorlex a good fit for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Businesses that value quality over speed-at-all-costs, founders and operators who want to understand their systems, teams looking for a long-term partner rather than a one-off vendor, and organizations ready to invest in software that will last."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Amorlex work with clients?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We follow a four-step process: first we understand your business context, then design the right system, build with care and precision in focused iterations, and finally provide ongoing support, iteration, and improvement after launch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Amorlex different from other software development agencies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are a small senior team with direct founder involvement on every engagement. We intentionally limit how many clients we work with to ensure full attention, and we optimize for outcomes rather than billable hours."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Skip link for accessibility -->

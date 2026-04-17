@@ -383,13 +383,13 @@ h3 {
 }
 
 .btn-secondary:hover {
-  background: rgba(37, 99, 235, 0.08);
+  background: var(--color-accent-light);
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
 
 .btn-secondary:active {
-  background: rgba(37, 99, 235, 0.12);
+  background: var(--color-accent-light);
 }
 
 
@@ -433,7 +433,7 @@ h3 {
 .hero {
   padding-top: calc(72px + var(--space-xl));
   padding-bottom: var(--space-xl);
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   background: 
@@ -548,7 +548,7 @@ h3 {
   height: 10px;
   background: transparent;
   border: 1.5px solid var(--color-accent);
-  opacity: 0.25;
+  opacity: 0.4;
 }
 
 #what-we-do::after {
@@ -560,7 +560,7 @@ h3 {
   width: 80px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-  opacity: 0.15;
+  opacity: 0.3;
 }
 
 .services-grid {
@@ -602,7 +602,7 @@ h3 {
   height: 16px;
   border-color: var(--color-accent);
   border-style: solid;
-  opacity: 0.2;
+  opacity: 0.35;
   transition: opacity var(--transition-fast);
 }
 
@@ -620,7 +620,7 @@ h3 {
 
 .service-card:hover::before,
 .service-card:hover::after {
-  opacity: 0.4;
+  opacity: 0.55;
 }
 
 .service-card:hover {
@@ -681,7 +681,7 @@ h3 {
   inset: 0;
   border: 1.5px solid var(--color-accent);
   border-radius: 50%;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 /* Subtle connecting line between process steps */
@@ -703,7 +703,7 @@ h3 {
     transparent 4px,
     transparent 8px
   );
-  opacity: 0.15;
+  opacity: 0.25;
 }
 
 @media (max-width: 639px) {
@@ -746,7 +746,7 @@ h3 {
   height: 6px;
   background: var(--color-accent);
   border-radius: 50%;
-  opacity: 0.2;
+  opacity: 0.35;
 }
 
 #why-amorlex::after {
@@ -758,7 +758,7 @@ h3 {
   width: 60px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-  opacity: 0.12;
+  opacity: 0.25;
 }
 
 .value-item {
@@ -782,7 +782,7 @@ h3 {
   height: 8px;
   border: 1.5px solid var(--color-accent);
   transform: rotate(45deg);
-  opacity: 0.35;
+  opacity: 0.45;
 }
 
 .value-item p {
@@ -815,7 +815,7 @@ h3 {
   width: 12px;
   height: 12px;
   border-style: solid;
-  opacity: 0.2;
+  opacity: 0.35;
   transition: opacity var(--transition-fast);
 }
 
@@ -843,7 +843,7 @@ h3 {
 
 .fit-card:hover::before,
 .fit-card:hover::after {
-  opacity: 0.4;
+  opacity: 0.55;
 }
 
 .fit-good {
@@ -929,7 +929,7 @@ h3 {
   height: 20px;
   border-color: var(--color-accent);
   border-style: solid;
-  opacity: 0.12;
+  opacity: 0.25;
 }
 
 .section-contact .container::before {
@@ -1124,29 +1124,31 @@ h3 {
 }
 
 
-.fade-in {
+.js .fade-in {
   opacity: 0;
   transform: translateY(20px);
 }
 
-.fade-in.visible {
+.js .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .fade-in {
+  .js .fade-in {
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .fade-in {
+  .fade-in,
+  .js .fade-in {
     opacity: 1;
     transform: none;
   }
-  
-  .fade-in.visible {
+
+  .fade-in.visible,
+  .js .fade-in.visible {
     transition: none;
   }
 }
@@ -1170,6 +1172,48 @@ h3 {
   .value-item:nth-child(2) { transition-delay: 100ms; }
   .value-item:nth-child(3) { transition-delay: 200ms; }
   .value-item:nth-child(4) { transition-delay: 300ms; }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #111827;
+    --color-bg-alt: #1f2937;
+    --color-text: #e5e7eb;
+    --color-text-muted: #9ca3af;
+    --color-heading: #f9fafb;
+    --color-accent: #60a5fa;
+    --color-accent-hover: #93c5fd;
+    --color-accent-light: rgba(96, 165, 250, 0.15);
+    --color-border: #374151;
+    --color-good: #34d399;
+    --color-good-light: rgba(52, 211, 153, 0.1);
+    --color-not: #f87171;
+    --color-not-light: rgba(248, 113, 113, 0.1);
+    --color-bg-alpha: rgba(17, 24, 39, 0.95);
+    --color-bg-warm: #1a1f2e;
+  }
+
+  .hero {
+    background:
+      linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+      linear-gradient(225deg, rgba(96, 165, 250, 0.06) 0%, transparent 40%),
+      var(--color-bg);
+  }
+
+  .hero::before {
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.15) 0%, transparent 70%);
+  }
+
+  .btn-primary,
+  .btn-primary:hover {
+    color: #111827;
+  }
+
+  .main-nav .nav-cta,
+  .main-nav .nav-cta:hover {
+    color: #111827;
+  }
 }
 
 /* Print Styles */
